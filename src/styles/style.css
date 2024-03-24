@@ -1,0 +1,143 @@
+@font-face {
+  font-family: ubunto;
+  src: url("../fonts/Ubuntu-Medium.ttf");
+}
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  font-family: ubunto;
+  list-style: none;
+  text-decoration: none;
+}
+/* HEADER */
+header {
+  text-align: start;
+  padding: 8px 5px;
+  vertical-align: middle;
+  background-color: #4a69bd;
+}
+.logo {
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.3s;
+}
+header:hover .logo {
+  transform: scale(1.2);
+}
+.nav {
+  display: inline-block;
+}
+.nav li {
+  display: inline-block;
+  margin: 0px 50px 0px 5px;
+  position: relative;
+  font-size: 20px;
+}
+.nav li a {
+  color: #fff;
+  transition: all 0.3s;
+}
+.nav li a::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  bottom: -7px;
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  left: 0px;
+  border-bottom: 3px solid #0c2461;
+  transition: all 0.5s;
+}
+.nav li a:hover::after {
+  width: 100%;
+}
+.nav li a::before {
+  content: "";
+  width: 0%;
+  position: absolute;
+  top: -5px;
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  right: 0px;
+  border-bottom: 3px solid #0c2461;
+  transition: all 0.5s;
+}
+.nav li a:hover::before {
+  width: 100%;
+}
+.nav li a:hover {
+  color: #0c2461;
+}
+/* MAIN */
+body {
+  text-align: center;
+  background-color: #e0e0e0;
+}
+main {
+  width: 90%;
+  min-height: 72vh;
+  display: inline-block;
+  padding: 42px 5px;
+}
+/* ITEMS */
+.item {
+  position: relative;
+  vertical-align: top;
+  text-align: end;
+  display: inline-block;
+  min-height: 600px;
+  width: 28%;
+  margin: 18px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 9px 9px 20px #b3b3b3, -9px -9px 20px #ffffff;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.item:hover {
+  transform: translateY(-16px);
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 22px #afafaf, -20px -20px 22px #ffffff;
+}
+.img-div {
+  overflow: hidden;
+}
+.item img {
+  width: 100%;
+  height: 400px;
+  transition: all 1.4s;
+}
+.item:hover img {
+  transform: scale(1.3);
+}
+.item-info {
+  padding: 15px;
+}
+.item h2 {
+  text-align: start;
+}
+.item span {
+  position: absolute;
+  right: 19px;
+  bottom: 19px;
+  text-align: right;
+  font-size: 18px;
+}
+.item span a {
+  color: #666;
+}
+#item-template {
+  display: none;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  vertical-align: middle;
+  background-color: #4a69bd;
+  color: #fff;
+  font-size: 20px;
+}
